@@ -1,6 +1,10 @@
 import {useState} from 'react';
 // useState 
 function About() {
+    // Rules Of Hooks
+    // You cannot use Hooks in Class Components 
+    // You cannot call hooks condtionally 
+    
     const [count,setCount] = useState(0);
     
     const handleIncrement = ()=>{

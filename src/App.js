@@ -11,7 +11,7 @@ function App() {
       <Header/>
       {/* Main Content */}
       <RoutesComponent/>
-      <Footer/>
+      
     </div>
   );
 }
