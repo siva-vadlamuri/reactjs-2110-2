@@ -1,49 +1,48 @@
 import React from "react";
 class Contact extends React.Component {
-    state={
-        firstName : '',
-        lastName : '',
-        email : '',
-        password : '',
-        firstNameErr : '',
-        lastNameErr : '',
-        emailErr : '',
-        passwordErr : '',
-    }
-   
-    handleChange = (e)=>{
-        // console.dir(e.target)
-        const {name,value} = e.target;
-       
-        this.setState({[name]:value})
-     
+  state = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    firstNameErr: "",
+    lastNameErr: "",
+    emailErr: "",
+    passwordErr: "",
+  };
 
-    }
-      
-    validate = ()=>{
-        let firstNameErr = "";
-        let lastNameErr = "";
-        let emailErr = "";
-        if(this.state.firstName.length<4){
-            firstNameErr = "First Should be minimum 4 character";
-        }
-       if(this.state.lastName.length<4){
-           lastNameErr = "Last Should be mimimum 4 characters";
-       }
-       if(!this.state.email.includes('@')){
-           emailErr = "Enter a valid email";
-       }
+  handleChange = (e) => {
+    // console.dir(e.target)
+    const { name, value } = e.target;
 
-       if(firstNameErr || lastNameErr || emailErr){
-           this.setState({firstNameErr,lastNameErr,emailErr})
-       }
+    this.setState({ [name]: value });
+    console.log(this.state);
+  };
+
+  validate = () => {
+    let firstNameErr = "";
+    let lastNameErr = "";
+    let emailErr = "";
+    if (this.state.firstName.length < 4) {
+      firstNameErr = "First Should be minimum 4 character";
+    }
+    if (this.state.lastName.length < 4) {
+      lastNameErr = "Last Should be mimimum 4 characters";
+    }
+    if (!this.state.email.includes("@")) {
+      emailErr = "Enter a valid email";
     }
 
-    handleSubmit = (e)=>{
-        e.preventDefault();
-        // console.log(this.state)
-            this.validate()
+    if (firstNameErr || lastNameErr || emailErr) {
+      this.setState({ firstNameErr, lastNameErr, emailErr });
     }
+  };
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    // console.log(this.state)
+    this.validate();
+  };
   render() {
     return (
       <div className="mt-4 ms-4">
@@ -63,7 +62,7 @@ class Contact extends React.Component {
             placeholder="Enter your last Name"
             onChange={this.handleChange}
           />
-           <p className="text-danger"> {this.state.lastNameErr} </p>
+          <p className="text-danger"> {this.state.lastNameErr} </p>
           <input
             className="form-control w-50 mb-3"
             type="text"
@@ -71,7 +70,7 @@ class Contact extends React.Component {
             placeholder="Enter your Email"
             onChange={this.handleChange}
           />
-           <p className="text-danger"> {this.state.emailErr} </p>
+          <p className="text-danger"> {this.state.emailErr} </p>
           <input
             className="form-control w-50 mb-3"
             type="password"
@@ -79,10 +78,8 @@ class Contact extends React.Component {
             placeholder="Enter your Password"
             onChange={this.handleChange}
           />
-          
 
           <button className="btn btn-info px-3 py-2">Register</button>
-          
         </form>
       </div>
     );
