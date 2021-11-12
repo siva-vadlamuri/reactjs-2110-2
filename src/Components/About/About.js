@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { useEffect } from "react/cjs/react.development";
+import Parent from "../context/Parent";
 // useState
 function About() {
   // Rules Of Hooks
@@ -77,6 +78,7 @@ function About() {
       >
         Click Me
       </button>
+      <Parent />
     </div>
   );
 }

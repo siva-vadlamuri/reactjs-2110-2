@@ -1,17 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-import Header from './Components/Header/Header';
-import Footer from './Components/Footer/Footer';
+import logo from "./logo.svg";
+import "./App.css";
+import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
 // import Routes from './Components/Routes/RoutesComponent';
-import RoutesComponent from './Components/Routes/RoutesComponent';
+import RoutesComponent from "./Components/Routes/RoutesComponent";
 
 function App() {
   return (
     <div>
-      <Header/>
+      <Header />
       {/* Main Content */}
-      <RoutesComponent/>
-      
+      <RoutesComponent />
     </div>
   );
 }

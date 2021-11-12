@@ -4,6 +4,7 @@ import Contact from "../Contact/Contact";
 import Home from "../Home/Home";
 import UserDetail from "../UserDetail/UserDetail";
 import { Routes, Route } from "react-router-dom";
+import Counter from "../reducer/Counter";
 // import {BrowserRouter as Router,Switch} from 'react-router-dom';
 // Switch
 
@@ -14,6 +15,7 @@ function RoutesComponent() {
       <Route path="/aboutus" element={<About />} />
       <Route path="/contactus" element={<Contact />} />
       <Route path="/user/:id" element={<UserDetail />} />
+      <Route path="/counter" element={<Counter />} />
     </Routes>
   );
 }
